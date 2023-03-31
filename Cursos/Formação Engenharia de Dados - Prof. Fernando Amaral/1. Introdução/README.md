@@ -1,4 +1,4 @@
-# 1. O que é a Engenharia de Dados?
+# 1 O que é a Engenharia de Dados?
 
 A Engenharia de Dados é responsável por **manter**, **desenvolver**, **testar**, **consolidar (extrair/ingerir)** e **garantir a disponibilidade** de estruturas de dados.
 
@@ -204,5 +204,134 @@ Formatos:
 - Native: dados são processados assim que chegam, sem esperar por demais dados;
 - Micro-batching: dados são agrupados e processados em grupo (delay).
 
+**4.8 Conceitos de Streaming**
+- Event = dado
+- Producer = gerador
+- Subscriber = consome
 
+**4.9 Latencia**
+- Intervalo de tempo entre a produção da informação e seu processamento
+  - Em batch = alta latencia
+  - Streaming = baixa latencia
+
+**4.10 Real Time e Near Real Time**
+- Real Time = em tempo real
+- Near Real Time = próximo ao tempo real
+
+- Normalmente quando fala-se Real Time, refere-se a Near Real Time
+
+**4.11 Processamento Distribuído**
+- Um processamento em batch / streaming / memória pode ou não ser distribuído
+
+**4.12 Commodity Hardware**
+- Commodity Hardware
+  - Barato
+  - Compatível
+  - Amplamente Disponível
+  - Intercambiável
+
+**4.13 Sistemas Resilientes**
+- Uma das características de sistemas resilientes - tolerante a falhas - é ser capaz de continuar operando mesmo sob alguma falha.
+
+**4.14 Sistemas Distribuídos**
+- Replicação = dados são copiados
+- A replicação dos dados é um aspecto de Sistemas Resilientes
+- A replicação dos dados ocorre quando tem-se falhas em
+  - Rede
+  - Software
+  - Etc.
+  - Disco Rígido (média de falas em discos rígidos por ano = 4.81%)
+
+**4.15 Change Data Capture**
+- Capturar mudanças nos dados transacionais a partir do log de transação
+  - Incremental = carga de mudanças
+    - Síncrono = captura a medida que as mudanças ocorrem
+	- Assíncronos = captura em intervalos
+  - Bulk = carga de todos os dados
+
+**4.16 Disponibilidade**
+- Riscos
+  - Falhas de Software
+  - Falhas de Hardware
+  - Falhas de Rede
+  - Ataques
+  - Erros humanos
+  - Upgrades
+
+**4.17 Fault Tolerance**
+- Tolerância a Falhas
+- Garantias que um sistema, em caso de falha, continuará operando
+
+- Executer Recover = tolera falha em slave, que é replicado
+- Full
+
+**4.18 State Management**
+- Em caso de falha, o sistema manterá o estado na recuperação
+  - Sem manter estado = o processo (ex. ingestão de dados) é reiniciado
+  - Com manutenção de estado, ele continua de onde parou
+
+**4.19 Cloud e On-Primese**
+- Cloud pode trazer custos menores (TCO)
+
+**4.20 ETL e ELT**
+- ETL: Extract, Transform and Load
+- ELT: Extract, Load and Transform
+
+**4.21 Metadados**
+- Dados de Dados
+  - Tipo
+  - Precisão
+  - Restrições
+
+**4.22 Data at Rest vs Data at Wire**
+
+**4.23 Orientado a Coluna ou Linha**
+- Orientado a linha comprime por grupos de linhas (blocos)
+- Mais eficiente para escrita e leitura
+  - Desvantagem - baixa taxa de compressão
+  - Leitura de algumas colunas - precisa ler todas
+
+- Orientado a Colunas
+  - Armazena-se colunas separadamente
+  - Maior taxa de compressão
+  - Melhor para leitura
+
+**4.24 Modelos de Dados**
+- Operacional (manter operações)
+  - Transacional/OLTP
+  - SQL / NoSQL
+- Analítico (apoio a decisão)
+  - Data Warehouse
+  - Data Lake
+  - OLAP
+
+- Operacional
+  - Produz dados
+  - Consulta, Inclusão, Exclusão, Atualização
+  - Não mantém histórico
+  - Redundancia mínima ou nula
+  - Pode ter grande volume
+  - Objetiva Integridade
+  - Orientado a processo
+
+- Analítico
+  - Carrega dados produzidos de várias fontes
+  - Inclusão e Consulta
+  - Mantém histórico
+  - Redundancia
+  - Volume sempre maior
+  - Objetiva Informação de Qualidade
+  - Orientado a negócio
+
+**4.25 CAP Theorem**
+- Usado no design de sistemas distribuídos
+- Importantíssimo para Engenharia de Dados
+- Proposto pelo cientista Eric Brewer no final dos anos 80
+
+**Impossível ter mais de 2**
+
+- Um sistema de dados distribuído só pode garantir 2 de 3 propriedades
+  - Consistência - todos os nós na rede retornam a mesma versão dos dados
+  - Disponibilidade - todos os nós respondem a leituras e escritas em um tempo razoável
+  - Partição tolerante a falhas - o sistema continua a funcionar, mesmo tendo perdido dados entre os nós
 
