@@ -1,0 +1,11 @@
+# verifique o status do postgres.
+sudo service postgresql status
+
+# caso esteja down, use o seguinte comando para iniciá-lo
+sudo service postgresql start
+
+# mudar para usuario postres
+sudo su - postgres
+
+#logar no postgres
+psql
