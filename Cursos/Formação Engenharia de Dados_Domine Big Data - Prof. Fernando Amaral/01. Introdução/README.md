@@ -1,8 +1,10 @@
-# 1 O que é a Engenharia de Dados?
+# Introdução 
+
+## O que é a Engenharia de Dados?
 
 A Engenharia de Dados é responsável por **manter**, **desenvolver**, **testar**, **consolidar (extrair/ingerir)** e **garantir a disponibilidade** de estruturas de dados.
 
-**1.1 Manter**
+**Manter**
 
 Quanto a:
 
@@ -12,7 +14,7 @@ Quanto a:
 - Planejamento;
 - Monitoramento.
 
-**1.2 Desenvolver**
+**Desenvolver**
 
 - Data Warehouses;
 - Data Lakes;
@@ -20,7 +22,7 @@ Quanto a:
 - Streaming;
 - Processos de ETL e ELT.
 
-**1.3 Testar**
+**Testar**
 
 Quanto a:
 
@@ -29,14 +31,14 @@ Quanto a:
 - Requisitos de governança de dados;
 - Segurança.
 
-**1.4 Consolidar: **Extrair/Ingerir**
+**Consolidar: **Extrair/Ingerir**
 
 Consolidar dados de diversas fontes:
 
 - Data Warehouses;
 - Data Lakes.
 
-**1.5 Garantir a Disponibilidade**
+**Garantir a Disponibilidade**
 
 - Sistema em produção:
   - Segurança;
@@ -45,17 +47,17 @@ Consolidar dados de diversas fontes:
   - Monitoramento;
   - Planos de Contigência.
 
-**1.6 Em resumo...**
+**Em resumo...**
 
 > "Um Engenheiro de Dados é o profissional que desenvolve, opera e mantém estruturas de dados complexas e heterogêneas, sendo o responsável pela segurança, integridade, disponibilidade e confiabilidade destes"
 
-**1.7 DBA vs Engenheiro de Dados**
+### DBA vs Engenheiro de Dados
 
 - Tradicionalmente o DBA é responsável por sistemas Transacionais e Dimensionais
 
 - O Engenheiro de Dados tem sob sua tutela uma gama maior de ferramentas e modelos de dados
 
-**1.8 Cientistas de Dados vs Engenheiro de Dados**
+### Cientistas de Dados vs Engenheiro de Dados
 
 O cientista de dados é responsável por:
 
@@ -65,17 +67,18 @@ O cientista de dados é responsável por:
 - Busca de padrões/outliers;
 - Automação de tarefas preditivas.
 
-# 2. O que é Big Data?
+## O que é Big Data?
 
-**2.1 Conceito**
+### Conceitos
+
 São dados produzidos de acordo com os 5 "V's": velocidade, volume, variedade, veracidade e valor.
 
-**2.2 Conceito II**
+### Conceito II
 
 > Big Data é o fenômeno da massificação de elementos de produção e armazenamento de dados, bem como os processos e tecnologias para extraí-los e analisá-los.
 – Introdução à Ciência de Dados, de Fernando Amaral
 
-**2.3 Causas**
+### Causas
 
 - Barateamento e Miniaturização da Tecnologia;
 - Facilidade de Coletar e Armazenar Dados;
@@ -84,19 +87,19 @@ São dados produzidos de acordo com os 5 "V's": velocidade, volume, variedade, v
 - Internet;
 - Dispositivos Conectados (IOT).
 
-# 3. Estruturas de Dados
+## Estruturas de Dados
 
 - Dados Estruturados;
 - Dados Semiestruturados;
 - Dados não Estruturados.
 
-**3.1 Dados Estruturados**
+### Dados Estruturados
 
 - Armazenado em uma mesma estrutura;
 - Estrutura Rígida;
 - Exemplo: Tabela de SGBD, Planilha Eletrônica.
 
-**3.2 Dados Semiestruturados**
+### Dados Semiestruturados
 
 - Estrutura heterogênea
 - Não estão completamente não estruturados. Existe uma estrutura representada.
@@ -109,7 +112,7 @@ Exemplos:
 - RDF - Resource Description Framework;
 - OWL - Web Ontology Language.
 
-**3.3 Dados Não Estruturados**
+### Dados Não Estruturados
 
 - Sem estrutura definida, nem de forma implícita;
 - Sem metadados ou descrição da estrutura;
@@ -134,7 +137,7 @@ Formatos:
 - AVRO: serializado
 - PARQUET: colunas aninhadas
 
-**3.4 Arquitetura de Dados**
+### Arquitetura de Dados
 
 - Ambiente Transacional
   - Produção e Guarda;
@@ -146,9 +149,9 @@ Formatos:
 	- Analisar dados;
   - Não há produção.
 
-# 4. Conceitos
+## Conceitos
 
-**4.1 Cluster**
+### Cluster
 
 - Computação Distribuída;
 - Cada computador é chamado nó;
@@ -160,12 +163,14 @@ Formatos:
   - Master: coordena, distribui, agenda;
   - Slave: armazena, processa.
 
-**4.2 Replicação vs Partição**
+### Replicação vs Partição
+
 - Replicação: dados são copiados;
 - Partição: dados são divididos;
 - Replicação e Partição: dados são divididos e copiados.
 
-**4.3 Tipos de Partição**
+### Tipos de Partição
+
 - Centralizada:
   - Serviço central gerencia os dados nas partições. Possui todos os metadados;
 	- Pode ser um gargalo para o sistema.
@@ -175,12 +180,14 @@ Formatos:
   - Hash:
 	- Usa uma Hash Table para distribuir os dados de forma balanceada entre os nós.
 
-**4.4 Mutation**
+### Mutation
+
 - Suporte ao sistema em alterar dados;
 - Em sistemas distribuídos isso pode não ser tão simples;
 - Alguns formatos de arquivo, como colunas, o processo também pode ser complexo.
 
-**4.5 Data Warehouse vs Data Lake**
+### Data Warehouse vs Data Lake
+
 - Data Warehouse (Clássico)
   - Implementado a partir dos anos 90;
   - Estruturado;
@@ -190,7 +197,8 @@ Formatos:
   - Todo tipo de informação;
   - Hadoop/HDFS.
 
-**4.6 Batch vs Streaming vs Interativo**
+### Batch vs Streaming vs Interativo
+
 - Batch: dados são coletados (extraídos, tratados, armazenados) e processados. Podem levar horas, semanas, meses...
 - Streaming: dados processados em tempo real, a medida que são produzidos. Saída em tempo real ou próximo ao tempo real. Processamento constante (Fluxo);
 - Interativo (Ad Hoc): Interface onde processamento é requerido e o resultado é analisado.
@@ -200,40 +208,48 @@ Formatos:
   - Streaming: Sistema de busca de produtos de varejo on-line: Avaliação de transação de pagamentos é fraudulenta. As transações são processadas a medida que são executadas;
   - Interativo (Ad Hoc): Rodar uma consulta para ver as vendas do dia de determinado produto.
 
-**4.7 Tipos de Streaming**
+### Tipos de Streaming
+
 - Native: dados são processados assim que chegam, sem esperar por demais dados;
 - Micro-batching: dados são agrupados e processados em grupo (delay).
 
-**4.8 Conceitos de Streaming**
+### Conceitos de Streaming
+
 - Event = dado
 - Producer = gerador
 - Subscriber = consome
 
-**4.9 Latencia**
+### Latencia
+
 - Intervalo de tempo entre a produção da informação e seu processamento
   - Em batch = alta latencia
   - Streaming = baixa latencia
 
-**4.10 Real Time e Near Real Time**
+### Real Time e Near Real Time
+
 - Real Time = em tempo real
 - Near Real Time = próximo ao tempo real
 
 - Normalmente quando fala-se Real Time, refere-se a Near Real Time
 
-**4.11 Processamento Distribuído**
+### Processamento Distribuído
+
 - Um processamento em batch / streaming / memória pode ou não ser distribuído
 
-**4.12 Commodity Hardware**
+### Commodity Hardware
+
 - Commodity Hardware
   - Barato
   - Compatível
   - Amplamente Disponível
   - Intercambiável
 
-**4.13 Sistemas Resilientes**
+### Sistemas Resilientes
+
 - Uma das características de sistemas resilientes - tolerante a falhas - é ser capaz de continuar operando mesmo sob alguma falha.
 
-**4.14 Sistemas Distribuídos**
+### Sistemas Distribuídos
+
 - Replicação = dados são copiados
 - A replicação dos dados é um aspecto de Sistemas Resilientes
 - A replicação dos dados ocorre quando tem-se falhas em
@@ -242,14 +258,16 @@ Formatos:
   - Etc.
   - Disco Rígido (média de falas em discos rígidos por ano = 4.81%)
 
-**4.15 Change Data Capture**
+### Change Data Capture
+
 - Capturar mudanças nos dados transacionais a partir do log de transação
   - Incremental = carga de mudanças
     - Síncrono = captura a medida que as mudanças ocorrem
 	- Assíncronos = captura em intervalos
   - Bulk = carga de todos os dados
 
-**4.16 Disponibilidade**
+### Disponibilidade
+
 - Riscos
   - Falhas de Software
   - Falhas de Hardware
@@ -258,34 +276,40 @@ Formatos:
   - Erros humanos
   - Upgrades
 
-**4.17 Fault Tolerance**
+### Fault Tolerance
+
 - Tolerância a Falhas
 - Garantias que um sistema, em caso de falha, continuará operando
 
 - Executer Recover = tolera falha em slave, que é replicado
 - Full
 
-**4.18 State Management**
+### State Management
+
 - Em caso de falha, o sistema manterá o estado na recuperação
   - Sem manter estado = o processo (ex. ingestão de dados) é reiniciado
   - Com manutenção de estado, ele continua de onde parou
 
-**4.19 Cloud e On-Primese**
+### Cloud e On-Primese
+
 - Cloud pode trazer custos menores (TCO)
 
-**4.20 ETL e ELT**
+### ETL e ELT
+
 - ETL: Extract, Transform and Load
 - ELT: Extract, Load and Transform
 
-**4.21 Metadados**
+### Metadados
+
 - Dados de Dados
   - Tipo
   - Precisão
   - Restrições
 
-**4.22 Data at Rest vs Data at Wire**
+### Data at Rest vs Data at Wire
 
-**4.23 Orientado a Coluna ou Linha**
+### Orientado a Coluna ou Linha
+
 - Orientado a linha comprime por grupos de linhas (blocos)
 - Mais eficiente para escrita e leitura
   - Desvantagem - baixa taxa de compressão
@@ -296,7 +320,8 @@ Formatos:
   - Maior taxa de compressão
   - Melhor para leitura
 
-**4.24 Modelos de Dados**
+### Modelos de Dados
+
 - Operacional (manter operações)
   - Transacional/OLTP
   - SQL / NoSQL
@@ -323,7 +348,8 @@ Formatos:
   - Objetiva Informação de Qualidade
   - Orientado a negócio
 
-**4.25 CAP Theorem**
+### CAP Theorem
+
 - Usado no design de sistemas distribuídos
 - Importantíssimo para Engenharia de Dados
 - Proposto pelo cientista Eric Brewer no final dos anos 80
@@ -334,4 +360,3 @@ Formatos:
   - Consistência - todos os nós na rede retornam a mesma versão dos dados
   - Disponibilidade - todos os nós respondem a leituras e escritas em um tempo razoável
   - Partição tolerante a falhas - o sistema continua a funcionar, mesmo tendo perdido dados entre os nós
-
