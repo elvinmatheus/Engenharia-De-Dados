@@ -56,6 +56,20 @@ SELECT * FROM [table_name];
 
 - Code style: keywords in ALL CAPS, semicolon (;) to end a statement.
 
+### Getting Data from a Database
+
+```python
+# Load pandas and sqlalchemy's create_engine
+import pandas as pd
+from sqlalchemy import create_engine
+
+# Create database engine to manage connections
+engine = create_engine("sqlite:///data.db")
+
+# Load entire weather table by table name
+weather = pd.read_sql("SELECT * FROM weather", engine)
+```
+
 ## Refining imports with SQL queries
 
 ### WHERE Clauses

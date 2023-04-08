@@ -13,12 +13,29 @@
 
 - Spreadsheets have their own loading function in `pandas` : `read_excel()`
 
+```python
+import pandas as pd
+
+# Read the Excel file
+survey_data = pd.read_excel("fcc_survey.xlsx")
+
+# View the first 5 lines of data
+print(survey_data.head())
+```
+
 #### Loading Select Columns and Rows
 
 - `read_excel()` has many keyword arguments in common with `read_csv()`
   - `nrows`: limit number of rows to load;
   - `skiprows`: specify number of rows or row numbers to skip;
   - `usecols`: choose columns by name, positional number, or letter (e.g. "A:P").
+
+```python
+# Read columns W-AB and AR of file, skipping metadata header
+survey_data = pd.read_excel("fcc_survey_with_headers.xlsx",
+							skiprows=2,
+							usecols="W:AB, AR")
+```
 
 ## Getting data from multiple worksheets
 
@@ -30,9 +47,23 @@
 - Pass a list of names/numbers to load more than one sheet at a time;
 - Any arguments passed to `read_excel()` apply to all sheets read.
 
+```python
+# Get the second sheet by position index
+survey_data_sheet2 = pd.read_excel('fcc_survey.xlsx',
+								   sheet_name=1)
+
+# Get the second sheet by name
+survey_data_2017 = pd.read_excel('fcc_survey.xlsx',
+								 sheet_name='2017')
+```
+
 ### Loading all sheets
 
 - Passing `sheet_name=None` to `read_excel()` reads all sheets in a workbook;
+
+```python
+survey_responses = pd.read_excel("fcc_survey.xlsx", sheet_name=None)
+```
 
 ## Modifying imports: true/false data
 
@@ -63,7 +94,7 @@
 - What would happen if a value were incorrectly coded as True?
 - Could the data be modeled another way (e.g., as float or integers)?
 
-## Modiffying imports: parsing dates
+## Modifying imports: parsing dates
 
 ### Date and Time Data
 
