@@ -1,5 +1,7 @@
 # Data engineering and big data: understanding data engineering
 
+> O curso "Understanding Data Engineering" oferece uma introdução abrangente aos fundamentos da engenharia de dados, abordando pipelines, armazenamento e processamento de dados.
+
 ## [1. What is data engineering?](https://github.com/elvinmatheus/Engenharia-De-Dados/tree/main/Cursos/Data%20Engineer%20with%20Python%20-%20Data%20Camp/1.%20Understanding%20Data%20Engineering/1.%20What%20is%20data%20engineering%3F)
 	- Data engineering and big data
 	- Data engineer vs. data scientists
