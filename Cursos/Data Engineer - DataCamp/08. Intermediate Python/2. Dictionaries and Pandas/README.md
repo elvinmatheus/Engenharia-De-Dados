@@ -25,8 +25,7 @@ dicio = {0:"hello", True:"dear", "two":"world"}
 |--------------------------------------|--------------------------------------| 
 | Select, update, and remove with `[]` | Select, update, and remove with `[]` |
 | Indexed by range of numbers          | Indexed by unique keys               |
-| Collection of values - order matters, 
-for selecting entire subsets           | Lookup table with unique keys        |
+| Collection of values - order matters, for selecting entire subsets | Lookup table with unique keys        |
 
 ## Pandas, part 1
 
